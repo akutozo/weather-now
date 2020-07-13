@@ -41,12 +41,16 @@ var cityweather = function (search) {
                 let weatherImage = data.weather[0].icon;
                 cImageEl.setAttribute("src","https://openweathermap.org/img/wn/" + weatherImage + "@2x.png");
                 cImageEl.setAttribute("alt",data.weather[0].description);
-                cTempEl.innerHTML = "Current Temperature: " + data.main.temp + " &#176F";
+                cTempEl.innerHTML = "Current Temperature: " + tempbright(data.main.temp) + " &#176F";
                 cHumidityEl.innerHTML = "Current Humidity: " + data.main.humidity + "%";
                 cWindEl.innerHTML = "Current Wind Speed: " + data.wind.speed + " MPH";
             });
     });
 };
+
+function tempbright(temp) {
+    return Math.floor((temp - 273.15) *1.8 +32);
+}
 
 //Take the city and push it through cityweather
 searchbtnEl.addEventListener("click",function() {
