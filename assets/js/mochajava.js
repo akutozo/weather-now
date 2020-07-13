@@ -14,8 +14,8 @@ const cWindEl = document.getElementById("wind");
 const cUVEl = document.getElementById("UV");
 
 //To Do:
-// UV Index
 // WHEN a search is complete, commit the search to local storage
+// Reflect Search History
 
 
 //Weather in the selected city
