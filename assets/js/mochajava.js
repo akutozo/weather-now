@@ -10,8 +10,8 @@ const cImageEl = document.getElementById("current-image");
 const cTempEl = document.getElementById("temp");
 const cHumidityEl = document.getElementById("humidity");4
 const cWindEl = document.getElementById("wind");
-//Unresolved
 const cUVEl = document.getElementById("UV");
+//We should probably get the local storage
 
 //To Do:
 // WHEN a search is complete, commit the search to local storage
@@ -109,6 +109,5 @@ searchbtnEl.addEventListener("click",function() {
     var cityInput = cityInputEl.value.trim();
     console.log("Searching for weather in: " + cityInput);
     const search = cityInput;
-
     cityweather(search);
 })
