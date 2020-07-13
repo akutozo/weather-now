@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <link rel="stylesheet" href="assets/css/styles.css" />
     <title>Document</title>
 </head>
-<body>
+<body class="bg-secondary">
     <nav class="hero jumbotron bg-dark">
         <h1 class="weather-header text-center text-light">Weather Dashboard</h1>
         <p>
         </p>
     </nav>
 
-    <div class="container-fluid">
+    <div class="container-fluid ">
         <div class="row">
             <div id="search-criteria" class="col-3">
                 <h2 class="">City Search</h2>
@@ -30,31 +30,31 @@
 
             <div id="weather-display" class="col-8 offset-1">
                 <div id ="current-weather" class="row">
-                    <div class="col-8 border border-dark">
+                    <div class="col-9 border border-dark bg-info">
                         <div class="row">
                             <div class="col-12">
-                                <span id="city-name" class="align-middle">Test City</span>
-                                <img id="current-pic" src="placeholder" alt="">
+                                <span id="city-name" class="align-middle"></span>
+                                <img id="current-image" src="" alt="">
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <p id="temperature">Test - Temps</p>
+                                <p id="temp"></p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <p id="humidity">Test - Humidity</p>
+                                <p id="humidity"></p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12">
-                                <p id="wind-speed">Test - Winds</p>
+                                <p id="wind"></p>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-12 d-flex">
-                                <p id="UV-index">Test - UV</p>
+                                <p id="UV"></p>
                             </div>
                         </div>
                     </div>
