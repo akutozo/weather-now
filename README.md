@@ -1,6 +1,4 @@
-# weather-now
-
-# Daily Planner.
+# Weather Now
 
 ## Purpose
 Weather Dashboards are a beautiful thing, handy in the hand and a scope of the land. This app is intended to give uses a real time snap shot of active weather and a future forecast of five days.
