@@ -10,6 +10,7 @@ const cImageEl = document.getElementById("current-image");
 const cTempEl = document.getElementById("temp");
 const cHumidityEl = document.getElementById("humidity");4
 const cWindEl = document.getElementById("wind");
+//Unresolved
 const cUVEl = document.getElementById("UV");
 
 //To Do:
@@ -37,6 +38,11 @@ var cityweather = function (search) {
             cHumidityEl.innerHTML = "Current Humidity: " + data.main.humidity + "%";
             cWindEl.innerHTML = "Current Wind Speed: " + data.wind.speed + " MPH";
             getforecast(search);
+            var lat = data.coord.lat;
+            console.log(lat)
+            var long = data.coord.lon;
+            console.log(long)
+            getuvindex(lat, long);
         });
     });
 };
@@ -48,8 +54,7 @@ var getforecast = function (search) {
     fetch(apiUrl)
     .then(function (response) {
         response.json().then(function(data) {
-            console.log(data);
-            
+            console.log(data);            
             const forecastEls = document.querySelectorAll(".forecast-card");
             for (i=0; i<forecastEls.length; i++) {
                 forecastEls[i].innerHTML = "";
@@ -73,6 +78,23 @@ var getforecast = function (search) {
                 forecastHumidityEl.innerHTML = "Humidity: " + data.list[forecastIndex].main.humidity + "%";
                 forecastEls[i].append(forecastHumidityEl);
                 }
+        });
+    });
+};
+
+var getuvindex = function (lat, long) {
+    let apiUrl = "https://api.openweathermap.org/data/2.5/uvi?appid=" + apikey + "&lat=" + lat + "&lon=" + long;
+    console.log(apiUrl)
+    console.log(lat, long)
+    fetch(apiUrl)
+    .then(function (response) {
+        response.json().then(function(data) {
+            console.log(data);
+            let UVIndex = document.createElement("span");
+            UVIndex.setAttribute("class","badge badge-danger");
+            UVIndex.innerHTML = data.value;            
+            cUVEl.innerHTML = "UV Index: ";
+            cUVEl.append(UVIndex);
         });
     });
 };
