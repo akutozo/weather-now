@@ -18,7 +18,7 @@
             <div id="search-criteria" class="col-3">
                 <h2 class="">City Search</h2>
                 <div class="input-group mb-2">
-                    <input name="user-request" id="city-name-input" type="text" class="form-control" placeholder="Enter city name">
+                    <input name="city-name-input" id="city-name-input" type="text" class="form-control" placeholder="Enter city name">
                     <div class="input-group-append">
                         <button id="search-button" type="button" class="btn btn-primary">
                         </button>
@@ -27,16 +27,47 @@
                 <button class="btn btn-primary mb-2" type="button" id="clear-history">Clear history</button>
                 <form id="search-history"></form>
             </div>
+
             <div id="weather-display" class="col-8 offset-1">
                 <div id ="current-weather" class="row">
-                    <p>This is row 1</p>
+                    <div class="col-8 border border-dark">
+                        <div class="row">
+                            <div class="col-12">
+                                <span id="city-name" class="align-middle">Test City</span>
+                                <img id="current-pic" src="placeholder" alt="">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="temperature">Test - Temps</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="humidity">Test - Humidity</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <p id="wind-speed">Test - Winds</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 d-flex">
+                                <p id="UV-index">Test - UV</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                <!-- Current Weather Ends -->
                 <div id="forecast-banner" class="row">
                     <h3>5 Day Forecast</h3>
                 </div>
+                <!-- Forecast Banner Ends -->
                 <div id="forecast-cards" class="row">
                     <p>This is row 3</p>
                 </div>
+                <!-- Forecast Cards End -->
             </div>
         </div>
 
