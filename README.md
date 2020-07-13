@@ -20,4 +20,4 @@ Look for future updates to include search history.
 
 Hosted at: https://akutozo.github.io/weather-now/
 
-![Weather Dashboard](/assets/weather-db.JPG "Final Version")
+![Weather Dashboard](/assets/weather-db.jpg "Final Version")
